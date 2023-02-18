@@ -118,3 +118,40 @@ checkWord("Hi")
 .catch( (error) => {
     console.log("Small word")
 })
+
+
+
+
+// -----------------------------Homework Set #2-------------------------------
+
+// #1  Double Char
+// Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+function doubleChar(str) {
+    var double_string = '';
+    for(i = 0; i < str.length; i++){
+        double_string += str[i] + str[i]
+    };
+    return double_string
+  };
+
+
+  // #2 Wil there be enough space?
+//   You have to write a function that accepts three parameters:
+
+//     cap is the amount of people the bus can hold excluding the driver.
+//     on is the number of people on the bus excluding the driver.
+//     wait is the number of people waiting to get on to the bus excluding the driver.
+
+// If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+  function enough(cap, on, wait) {
+    var space = cap - on - wait;
+    if (space <= 0){
+      return Math.abs(space)
+    } else {
+      if (space > 0){
+        return 0
+      }
+    }
+  }
